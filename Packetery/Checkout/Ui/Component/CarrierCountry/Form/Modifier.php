@@ -31,6 +31,12 @@ class Modifier implements ModifierInterface
     /** @var \Packetery\Checkout\Model\FeatureFlag\Manager  */
     private $featureFlagManager;
 
+    /** @var \Packetery\Checkout\Model\ResourceModel\Carrier\CollectionFactory */
+    private $carrierCollectionFactory;
+
+    /** @var Carrier\Imp\Packetery\Carrier */
+    private $packeteryCarrier;
+
     /**
      * Modifier constructor.
      *

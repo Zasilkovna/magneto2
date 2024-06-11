@@ -129,6 +129,10 @@ class Service
             return 0;
         }
 
+        if ($request->getFreeShipping()) {
+            return 0;
+        }
+
         $weightRules = $this->getWeightRulesByPricingRule($pricingRule);
         return $this->resolveWeightedPrice($weightRules, $weightTotal, $config->getMaxWeight());
     }
